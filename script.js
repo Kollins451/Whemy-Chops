@@ -1,62 +1,64 @@
-/* =========================================
-   CHOPS BY WHEMY
-   JAVASCRIPT
-========================================= */
-
-
-/* =========================================
-   MOBILE NAVIGATION
-========================================= */
-
 const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const nav = document.getElementById("nav");
 
-if (menuToggle && navLinks) {
+if (menuToggle && nav) {
 
   menuToggle.addEventListener("click", () => {
 
-    menuToggle.classList.toggle("active");
+    const isOpen = nav.classList.toggle("active");
 
-    navLinks.classList.toggle("active");
-
-    document.body.classList.toggle("menu-open");
+    menuToggle.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
 
   });
 
 
-  /* Close menu after clicking a link */
-
-  document.querySelectorAll(".nav-links a").forEach((link) => {
+  nav.querySelectorAll("a").forEach((link) => {
 
     link.addEventListener("click", () => {
 
-      menuToggle.classList.remove("active");
+      nav.classList.remove("active");
 
-      navLinks.classList.remove("active");
-
-      document.body.classList.remove("menu-open");
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
 
     });
 
   });
 
+
+  window.addEventListener("resize", () => {
+
+    if (window.innerWidth > 950) {
+
+      nav.classList.remove("active");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+      );
+
+    }
+
+  });
+
 }
 
 
-/* =========================================
-   CURRENT YEAR
-========================================= */
+/* ================= FOOTER YEAR ================= */
 
-const yearElement = document.getElementById("year");
+const year = document.getElementById("year");
 
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
+if (year) {
+  year.textContent = new Date().getFullYear();
 }
 
 
-/* =========================================
-   NAVBAR BACKGROUND ON SCROLL
-========================================= */
+/* ================= HEADER SCROLL ================= */
 
 const header = document.querySelector(".header");
 
@@ -64,32 +66,13 @@ window.addEventListener("scroll", () => {
 
   if (!header) return;
 
-  if (window.scrollY > 50) {
+  if (window.scrollY > 30) {
 
-    header.style.background = "rgba(7, 7, 7, 0.96)";
+    header.style.background = "rgba(9, 9, 9, 0.95)";
 
   } else {
 
-    header.style.background = "rgba(9, 9, 9, 0.88)";
-
-  }
-
-});
-
-
-/* =========================================
-   CLOSE MOBILE MENU WHEN RESIZING
-========================================= */
-
-window.addEventListener("resize", () => {
-
-  if (window.innerWidth > 700) {
-
-    menuToggle?.classList.remove("active");
-
-    navLinks?.classList.remove("active");
-
-    document.body.classList.remove("menu-open");
+    header.style.background = "rgba(9, 9, 9, 0.72)";
 
   }
 
