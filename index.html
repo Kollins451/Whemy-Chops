@@ -1,73 +1,879 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Chops by Whemy is a Lagos finger food vendor serving delicious small chops, party food, seafood and custom food packages for every occasion."
-  >
-
-  <meta
-    name="keywords"
-    content="Chops by Whemy, Lagos finger food, small chops Lagos, finger food vendor Lagos, party food Lagos, event food Lagos"
-  >
-
-  <meta name="author" content="Chops by Whemy">
-
-  <meta name="theme-color" content="#090909">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Chops by Whemy | Lagos Finger Food Vendor</title>
 
-
-  <!-- =====================================================
-       GOOGLE FONTS
-  ====================================================== -->
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
+  <meta
+    name="description"
+    content="Chops by Whemy — Lagos finger food vendor serving delicious party finger foods, Chinese foods and custom food orders."
   >
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
   >
 
-
-  <!-- =====================================================
-       MAIN STYLESHEET
-  ====================================================== -->
-
   <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
+  <!-- ================= HEADER ================= -->
 
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
-
-  <header class="header" id="header">
-
+  <header class="header">
     <div class="container nav-container">
 
-
-      <!-- LOGO -->
-
       <a href="#home" class="logo" aria-label="Chops by Whemy Home">
+        <span class="logo-main">CHOPS</span>
+        <span class="logo-sub">BY WHEMY</span>
+      </a>
+
+      <nav class="nav" id="nav">
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#videos">Videos</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+
+        <a
+          href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
+          class="nav-order"
+          target="_blank"
+          rel="noopener"
+        >
+          Order Now
+        </a>
+
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-overlay"></div>
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <span class="hero-label">
+            LAGOS FINGER FOOD VENDOR
+          </span>
+
+          <h1>
+            Good Food.
+            <span>Good Moments.</span>
+          </h1>
+
+          <p>
+            Delicious finger foods, party bites and Chinese food made to
+            bring people together. Perfect for parties, events,
+            celebrations and special occasions.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a
+              href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+            >
+              Place an Order
+            </a>
+
+            <a href="#menu" class="btn btn-outline">
+              Explore Menu
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="section about" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="about-image">
+
+            <img
+              src="https://plain-weur-prod-public.komododecks.com/202609/09/TJFqYd8JO8UgFWEOwNLs/image.jpg"
+              alt="Chops by Whemy finger foods"
+            >
+
+            <div class="about-badge">
+              <strong>100%</strong>
+              <span>DELICIOUS</span>
+            </div>
+
+          </div>
+
+
+          <div class="about-content">
+
+            <span class="section-label">
+              ABOUT CHOPS BY WHEMY
+            </span>
+
+            <h2>
+              Food made for
+              <span>good times.</span>
+            </h2>
+
+            <p>
+              Chops by Whemy is a Lagos-based finger food vendor serving
+              delicious and beautifully prepared food for parties,
+              celebrations, events and special occasions.
+            </p>
+
+            <p>
+              From classic party finger foods to Chinese food options,
+              we make it easy to enjoy great food that fits your event
+              and your taste.
+            </p>
+
+
+            <div class="about-features">
+
+              <div class="feature">
+
+                <div class="feature-number">
+                  01
+                </div>
+
+                <div>
+                  <h3>Party Finger Foods</h3>
+                  <p>
+                    Delicious bites prepared for parties and events.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="feature">
+
+                <div class="feature-number">
+                  02
+                </div>
+
+                <div>
+                  <h3>Chinese Food</h3>
+                  <p>
+                    Chinese food options are also available for special
+                    orders and events.
+                  </p>
+                </div>
+
+              </div>
+
+
+              <div class="feature">
+
+                <div class="feature-number">
+                  03
+                </div>
+
+                <div>
+                  <h3>Made for Your Occasion</h3>
+                  <p>
+                    Food prepared with your event and guests in mind.
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= MENU ================= -->
+
+    <section class="section menu-section" id="menu">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="section-label">
+              WHAT WE SERVE
+            </span>
+
+            <h2>
+              Our <span>Specialties</span>
+            </h2>
+          </div>
+
+          <p>
+            Delicious food options prepared for parties, events,
+            celebrations and special occasions.
+          </p>
+
+        </div>
+
+
+        <div class="menu-grid">
+
+          <!-- 01 -->
+
+          <article class="menu-card">
+
+            <div class="menu-image">
+
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg"
+                alt="Party finger foods"
+              >
+
+              <span class="menu-number">01</span>
+
+            </div>
+
+            <div class="menu-info">
+
+              <h3>Party Finger Foods</h3>
+
+              <p>
+                Tasty and beautifully prepared finger foods perfect
+                for parties and celebrations.
+              </p>
+
+              <a
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20order%20party%20finger%20foods."
+                target="_blank"
+                rel="noopener"
+                class="menu-link"
+              >
+                Order Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- 02 -->
+
+          <article class="menu-card">
+
+            <div class="menu-image">
+
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202609/09/6yO9HIBW0sAKNHPUpzif/image.jpg"
+                alt="Delicious party bites"
+              >
+
+              <span class="menu-number">02</span>
+
+            </div>
+
+            <div class="menu-info">
+
+              <h3>Party Bites</h3>
+
+              <p>
+                Small, delicious bites that make every gathering
+                more enjoyable.
+              </p>
+
+              <a
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20order%20party%20bites."
+                target="_blank"
+                rel="noopener"
+                class="menu-link"
+              >
+                Order Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- 03 -->
+
+          <article class="menu-card">
+
+            <div class="menu-image">
+
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202609/09/BWyxBKmnbohXOtGbrle6/image.jpg"
+                alt="Event food"
+              >
+
+              <span class="menu-number">03</span>
+
+            </div>
+
+            <div class="menu-info">
+
+              <h3>Event Food</h3>
+
+              <p>
+                Food prepared to make your events memorable and
+                satisfying for your guests.
+              </p>
+
+              <a
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20need%20food%20for%20an%20event."
+                target="_blank"
+                rel="noopener"
+                class="menu-link"
+              >
+                Order Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- 04 -->
+
+          <article class="menu-card">
+
+            <div class="menu-image">
+
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202609/09/TJFqYd8JO8UgFWEOwNLs/image.jpg"
+                alt="Finger food catering"
+              >
+
+              <span class="menu-number">04</span>
+
+            </div>
+
+            <div class="menu-info">
+
+              <h3>Finger Food Catering</h3>
+
+              <p>
+                Catering options for birthdays, celebrations,
+                gatherings and special occasions.
+              </p>
+
+              <a
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20need%20finger%20food%20catering."
+                target="_blank"
+                rel="noopener"
+                class="menu-link"
+              >
+                Order Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- 05 -->
+
+          <article class="menu-card">
+
+            <div class="menu-image">
+
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg"
+                alt="Special occasion food"
+              >
+
+              <span class="menu-number">05</span>
+
+            </div>
+
+            <div class="menu-info">
+
+              <h3>Special Occasions</h3>
+
+              <p>
+                Delicious food for birthdays, weddings, get-togethers
+                and other memorable moments.
+              </p>
+
+              <a
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20want%20to%20make%20an%20order%20for%20a%20special%20occasion."
+                target="_blank"
+                rel="noopener"
+                class="menu-link"
+              >
+                Order Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- 06 -->
+
+          <article class="menu-card">
+
+            <div class="menu-image">
+
+              <img
+                src="https://plain-weur-prod-public.komododecks.com/202609/09/6yO9HIBW0sAKNHPUpzif/image.jpg"
+                alt="Chinese food and bites"
+              >
+
+              <span class="menu-number">06</span>
+
+            </div>
+
+            <div class="menu-info">
+
+              <h3>Chinese Food</h3>
+
+              <p>
+                Chinese food options are available alongside our
+                party finger foods for special orders and events.
+              </p>
+
+              <a
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20ask%20about%20Chinese%20food."
+                target="_blank"
+                rel="noopener"
+                class="menu-link"
+              >
+                Ask About It →
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= VIDEOS ================= -->
+
+    <section class="section video-section" id="videos">
+
+      <div class="container">
+
+        <div class="video-heading">
+
+          <span class="section-label">
+            WATCH OUR FOOD
+          </span>
+
+          <h2>
+            Fresh from the
+            <span>Kitchen</span>
+          </h2>
+
+          <p>
+            Take a look at some of the food and moments from
+            Chops by Whemy.
+          </p>
+
+        </div>
+
+
+        <div class="video-grid">
+
+          <!-- VIDEO 1 -->
+
+          <div class="video-card">
+
+            <div class="video-wrapper">
+
+              <iframe
+                src="https://share.zight.com/01a087be-05ac-7792-bb21-4260afb4bb77?embed=true&branding=true&title=true"
+                width="100%"
+                height="100%"
+                style="border: none"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowtransparency="true"
+                allowfullscreen="true"
+                title="Chops by Whemy Food Video 1"
+              ></iframe>
+
+            </div>
+
+          </div>
+
+
+          <!-- VIDEO 2 -->
+
+          <div class="video-card">
+
+            <div class="video-wrapper">
+
+              <iframe
+                src="https://share.zight.com/01a087bb-fadc-712b-a417-2edae002c1d4?embed=true&branding=true&title=true"
+                width="100%"
+                height="100%"
+                style="border: none"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowtransparency="true"
+                allowfullscreen="true"
+                title="Chops by Whemy Food Video 2"
+              ></iframe>
+
+            </div>
+
+          </div>
+
+
+          <!-- VIDEO 3 -->
+
+          <div class="video-card">
+
+            <div class="video-wrapper">
+
+              <iframe
+                src="https://share.zight.com/01a087bc-9582-7697-b418-9b157e8281ff?embed=true&branding=true&title=true"
+                width="100%"
+                height="100%"
+                style="border: none"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowtransparency="true"
+                allowfullscreen="true"
+                title="Chops by Whemy Food Video 3"
+              ></iframe>
+
+            </div>
+
+          </div>
+
+
+          <!-- VIDEO 4 -->
+
+          <div class="video-card">
+
+            <div class="video-wrapper">
+
+              <iframe
+                src="https://share.zight.com/01a087bc-f6b2-71e7-abb6-3a718cb6ffb6?embed=true&branding=true&title=true"
+                width="100%"
+                height="100%"
+                style="border: none"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowtransparency="true"
+                allowfullscreen="true"
+                title="Chops by Whemy Food Video 4"
+              ></iframe>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section class="section gallery-section" id="gallery">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+
+            <span class="section-label">
+              OUR GALLERY
+            </span>
+
+            <h2>
+              Food worth
+              <span>sharing.</span>
+            </h2>
+
+          </div>
+
+          <p>
+            A glimpse of the delicious food and experiences
+            we create for our customers.
+          </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item gallery-large">
+
+            <img
+              src="https://plain-weur-prod-public.komododecks.com/202609/09/TJFqYd8JO8UgFWEOwNLs/image.jpg"
+              alt="Chops by Whemy food"
+            >
+
+            <div class="gallery-overlay">
+              <span>Chops by Whemy</span>
+            </div>
+
+          </div>
+
+
+          <div class="gallery-item">
+
+            <img
+              src="https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg"
+              alt="Finger foods"
+            >
+
+            <div class="gallery-overlay">
+              <span>Finger Foods</span>
+            </div>
+
+          </div>
+
+
+          <div class="gallery-item">
+
+            <img
+              src="https://plain-weur-prod-public.komododecks.com/202609/09/6yO9HIBW0sAKNHPUpzif/image.jpg"
+              alt="Party bites"
+            >
+
+            <div class="gallery-overlay">
+              <span>Party Bites</span>
+            </div>
+
+          </div>
+
+
+          <div class="gallery-item">
+
+            <img
+              src="https://plain-weur-prod-public.komododecks.com/202609/09/BWyxBKmnbohXOtGbrle6/image.jpg"
+              alt="Event food"
+            >
+
+            <div class="gallery-overlay">
+              <span>Event Food</span>
+            </div>
+
+          </div>
+
+
+          <div class="gallery-item">
+
+            <img
+              src="https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg"
+              alt="Special occasion food"
+            >
+
+            <div class="gallery-overlay">
+              <span>Special Occasions</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="cta-content">
+
+          <div>
+
+            <span class="section-label">
+              READY TO ORDER?
+            </span>
+
+            <h2>
+              Let's make your event
+              <span>delicious.</span>
+            </h2>
+
+          </div>
+
+          <a
+            href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
+            class="btn btn-dark"
+            target="_blank"
+            rel="noopener"
+          >
+            Order on WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="section contact-section" id="contact">
+
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <div class="contact-content">
+
+            <span class="section-label">
+              GET IN TOUCH
+            </span>
+
+            <h2>
+              Let's talk
+              <span>food.</span>
+            </h2>
+
+            <p>
+              Ready to place an order or planning food for an event?
+              Contact Chops by Whemy directly.
+            </p>
+
+          </div>
+
+
+          <div class="contact-details">
+
+            <a
+              href="https://wa.me/2348083238515"
+              target="_blank"
+              rel="noopener"
+              class="contact-item"
+            >
+
+              <span class="contact-label">
+                WHATSAPP
+              </span>
+
+              <strong>
+                +234 808 323 8515
+              </strong>
+
+            </a>
+
+
+            <a
+              href="https://www.instagram.com/chopsbywhemy/"
+              target="_blank"
+              rel="noopener"
+              class="contact-item"
+            >
+
+              <span class="contact-label">
+                INSTAGRAM
+              </span>
+
+              <strong>
+                @chopsbywhemy
+              </strong>
+
+            </a>
+
+
+            <a
+              href="https://www.tiktok.com/search?q=Lagos%20Finger%20Food%20Vendor"
+              target="_blank"
+              rel="noopener"
+              class="contact-item"
+            >
+
+              <span class="contact-label">
+                TIKTOK
+              </span>
+
+              <strong>
+                Lagos Finger Food Vendor
+              </strong>
+
+            </a>
+
+
+            <div class="contact-item">
+
+              <span class="contact-label">
+                LOCATION
+              </span>
+
+              <strong>
+                Lagos, Nigeria
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="container footer-container">
+
+      <a href="#home" class="logo">
 
         <span class="logo-main">
           CHOPS
@@ -80,1303 +886,38 @@
       </a>
 
 
-      <!-- MOBILE MENU BUTTON -->
+      <p>
+        © <span id="year"></span> Chops by Whemy. All rights reserved.
+      </p>
 
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="nav"
-      >
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
-
-
-      <!-- NAVIGATION -->
-
-      <nav class="nav" id="nav" aria-label="Main navigation">
-
-        <a href="#home">
-          Home
-        </a>
-
-        <a href="#about">
-          About
-        </a>
-
-        <a href="#menu">
-          Menu
-        </a>
-
-        <a href="#gallery">
-          Gallery
-        </a>
-
-        <a href="#video">
-          Video
-        </a>
-
-        <a href="#contact">
-          Contact
-        </a>
-
-
-        <a
-          href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
-          class="nav-order"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Order Now
-        </a>
-
-      </nav>
-
-    </div>
-
-  </header>
-
-
-
-  <!-- =====================================================
-       MAIN CONTENT
-  ====================================================== -->
-
-  <main>
-
-
-    <!-- ===================================================
-         HERO SECTION
-    ==================================================== -->
-
-    <section class="hero" id="home">
-
-      <div class="hero-overlay"></div>
-
-
-      <div class="container hero-content">
-
-
-        <span class="hero-label">
-          LAGOS FINGER FOOD VENDOR
-        </span>
-
-
-        <h1>
-
-          Delicious Bites
-
-          <span>
-            Made For Every Occasion.
-          </span>
-
-        </h1>
-
-
-        <p>
-          Fresh, tasty and beautifully prepared finger foods
-          for parties, celebrations, events and every special
-          moment.
-        </p>
-
-
-        <div class="hero-buttons">
-
-
-          <a
-            href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
-            class="btn btn-primary"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Order on WhatsApp
-          </a>
-
-
-          <a
-            href="#menu"
-            class="btn btn-outline"
-          >
-            Explore Our Menu
-          </a>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         ABOUT SECTION
-    ==================================================== -->
-
-    <section
-      class="section about"
-      id="about"
-    >
-
-      <div class="container about-grid">
-
-
-        <!-- ABOUT IMAGE -->
-
-        <div class="about-image">
-
-          <img
-            src="https://plain-weur-prod-public.komododecks.com/202609/09/TJFqYd8JO8UgFWEOwNLs/image.jpg"
-            alt="Chops by Whemy finger food"
-            loading="lazy"
-          >
-
-
-          <div class="about-badge">
-
-            <strong>
-              100%
-            </strong>
-
-            <span>
-              Made With Love
-            </span>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- ABOUT CONTENT -->
-
-        <div class="about-content">
-
-
-          <span class="section-label">
-            ABOUT CHOPS BY WHEMY
-          </span>
-
-
-          <h2>
-
-            Great Food.
-
-            <span>
-              Great Moments.
-            </span>
-
-          </h2>
-
-
-          <p>
-            At Chops by Whemy, we are passionate about creating
-            delicious finger foods that make every occasion
-            special.
-          </p>
-
-
-          <p>
-            From intimate gatherings to large celebrations,
-            we prepare tasty and beautifully presented food
-            that your guests will love.
-          </p>
-
-
-
-          <!-- FEATURES -->
-
-          <div class="about-features">
-
-
-            <div class="feature">
-
-              <span class="feature-number">
-                01
-              </span>
-
-              <div>
-
-                <h3>
-                  Fresh Ingredients
-                </h3>
-
-                <p>
-                  Quality ingredients prepared with care.
-                </p>
-
-              </div>
-
-            </div>
-
-
-
-            <div class="feature">
-
-              <span class="feature-number">
-                02
-              </span>
-
-              <div>
-
-                <h3>
-                  Made For Events
-                </h3>
-
-                <p>
-                  Perfect for parties and special occasions.
-                </p>
-
-              </div>
-
-            </div>
-
-
-
-            <div class="feature">
-
-              <span class="feature-number">
-                03
-              </span>
-
-              <div>
-
-                <h3>
-                  Beautiful Presentation
-                </h3>
-
-                <p>
-                  Food that tastes good and looks amazing.
-                </p>
-
-              </div>
-
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         MENU / PRODUCTS SECTION
-    ==================================================== -->
-
-    <section
-      class="section menu-section"
-      id="menu"
-    >
-
-      <div class="container">
-
-
-        <!-- SECTION HEADING -->
-
-        <div class="section-heading">
-
-
-          <div>
-
-            <span class="section-label">
-              WHAT WE OFFER
-            </span>
-
-
-            <h2>
-
-              Our Delicious
-
-              <span>
-                Specialties
-              </span>
-
-            </h2>
-
-          </div>
-
-
-          <p>
-            Discover some of our delicious finger foods,
-            seafood selections and event food packages
-            prepared specially for your occasion.
-          </p>
-
-
-        </div>
-
-
-
-        <!-- PRODUCTS GRID -->
-
-        <div class="menu-grid">
-
-
-          <!-- =================================================
-               PRODUCT 01
-          ================================================== -->
-
-          <article class="menu-card">
-
-
-            <div class="menu-image">
-
-              <img
-                src="https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg"
-                alt="Assorted small chops by Chops by Whemy"
-                loading="lazy"
-              >
-
-              <span class="menu-number">
-                01
-              </span>
-
-            </div>
-
-
-            <div class="menu-info">
-
-              <h3>
-                Assorted Small Chops
-              </h3>
-
-
-              <p>
-                A delicious mix of party favourites,
-                freshly prepared and beautifully served
-                for your guests.
-              </p>
-
-
-              <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20am%20interested%20in%20your%20Assorted%20Small%20Chops."
-                class="menu-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Order Now →
-              </a>
-
-            </div>
-
-          </article>
-
-
-
-          <!-- =================================================
-               PRODUCT 02
-          ================================================== -->
-
-          <article class="menu-card">
-
-
-            <div class="menu-image">
-
-              <img
-                src="https://plain-weur-prod-public.komododecks.com/202609/09/6yO9HIBW0sAKNHPUpzif/image.jpg"
-                alt="Fish and finger food platter by Chops by Whemy"
-                loading="lazy"
-              >
-
-              <span class="menu-number">
-                02
-              </span>
-
-            </div>
-
-
-            <div class="menu-info">
-
-              <h3>
-                Fish & Finger Foods
-              </h3>
-
-
-              <p>
-                Delicious fish and finger food combinations
-                prepared to make your event extra special.
-              </p>
-
-
-              <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20am%20interested%20in%20your%20Fish%20and%20Finger%20Foods."
-                class="menu-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Order Now →
-              </a>
-
-            </div>
-
-          </article>
-
-
-
-          <!-- =================================================
-               PRODUCT 03
-          ================================================== -->
-
-          <article class="menu-card">
-
-
-            <div class="menu-image">
-
-              <img
-                src="https://plain-weur-prod-public.komododecks.com/202609/09/BWyxBKmnbohXOtGbrle6/image.jpg"
-                alt="Seafood platter by Chops by Whemy"
-                loading="lazy"
-              >
-
-              <span class="menu-number">
-                03
-              </span>
-
-            </div>
-
-
-            <div class="menu-info">
-
-              <h3>
-                Seafood Platters
-              </h3>
-
-
-              <p>
-                Beautifully prepared seafood dishes for
-                celebrations, parties and special gatherings.
-              </p>
-
-
-              <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20am%20interested%20in%20your%20Seafood%20Platters."
-                class="menu-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Order Now →
-              </a>
-
-            </div>
-
-          </article>
-
-
-
-          <!-- =================================================
-               PRODUCT 04
-          ================================================== -->
-
-          <article class="menu-card">
-
-
-            <div class="menu-image">
-
-              <img
-                src="https://plain-weur-prod-public.komododecks.com/202609/09/TJFqYd8JO8UgFWEOwNLs/image.jpg"
-                alt="Shrimp food cups by Chops by Whemy"
-                loading="lazy"
-              >
-
-              <span class="menu-number">
-                04
-              </span>
-
-            </div>
-
-
-            <div class="menu-info">
-
-              <h3>
-                Shrimp & Food Cups
-              </h3>
-
-
-              <p>
-                Elegant individual food servings that are
-                perfect for parties, events and special occasions.
-              </p>
-
-
-              <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20am%20interested%20in%20your%20Shrimp%20and%20Food%20Cups."
-                class="menu-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Order Now →
-              </a>
-
-            </div>
-
-          </article>
-
-
-
-          <!-- =================================================
-               PRODUCT 05
-          ================================================== -->
-
-          <article class="menu-card">
-
-
-            <div class="menu-image">
-
-              <img
-                src="https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg"
-                alt="Party food package by Chops by Whemy"
-                loading="lazy"
-              >
-
-              <span class="menu-number">
-                05
-              </span>
-
-            </div>
-
-
-            <div class="menu-info">
-
-              <h3>
-                Party Packages
-              </h3>
-
-
-              <p>
-                Food packages prepared for birthdays,
-                weddings, celebrations and corporate events.
-              </p>
-
-
-              <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20ask%20about%20your%20Party%20Packages."
-                class="menu-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Packages →
-              </a>
-
-            </div>
-
-          </article>
-
-
-
-          <!-- =================================================
-               PRODUCT 06
-          ================================================== -->
-
-          <article class="menu-card">
-
-
-            <div class="menu-image">
-
-              <img
-                src="https://plain-weur-prod-public.komododecks.com/202609/09/BWyxBKmnbohXOtGbrle6/image.jpg"
-                alt="Custom food order by Chops by Whemy"
-                loading="lazy"
-              >
-
-              <span class="menu-number">
-                06
-              </span>
-
-            </div>
-
-
-            <div class="menu-info">
-
-              <h3>
-                Custom Orders
-              </h3>
-
-
-              <p>
-                Have something specific in mind?
-                Tell us what you need and we will create
-                something special for your event.
-              </p>
-
-
-              <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20make%20a%20custom%20food%20order."
-                class="menu-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Request Custom Order →
-              </a>
-
-            </div>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         VIDEO SECTION
-    ==================================================== -->
-
-    <section
-      class="section video-section"
-      id="video"
-    >
-
-      <div class="container">
-
-
-        <div class="video-heading">
-
-          <span class="section-label">
-            WATCH OUR FOOD
-          </span>
-
-
-          <h2>
-
-            See What We
-
-            <span>
-              Create.
-            </span>
-
-          </h2>
-
-
-          <p>
-            Take a look at some of the delicious food,
-            preparation and presentation from Chops by Whemy.
-          </p>
-
-        </div>
-
-
-
-        <div class="video-wrapper">
-
-          <iframe
-            src="https://www.kapwing.com/videos/6aa1b2899284602dd4f8d20e"
-            title="Chops by Whemy food video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         GALLERY SECTION
-    ==================================================== -->
-
-    <section
-      class="section gallery-section"
-      id="gallery"
-    >
-
-      <div class="container">
-
-
-        <div class="section-heading gallery-heading">
-
-
-          <div>
-
-            <span class="section-label">
-              OUR FOOD
-            </span>
-
-
-            <h2>
-
-              Fresh From
-
-              <span>
-                Our Kitchen.
-              </span>
-
-            </h2>
-
-          </div>
-
-
-          <p>
-            A glimpse of the delicious food and beautiful
-            presentation you can expect from Chops by Whemy.
-          </p>
-
-
-        </div>
-
-
-
-        <!-- GALLERY -->
-
-        <div class="gallery-grid">
-
-
-          <!-- GALLERY ITEM 01 -->
-
-          <div class="gallery-item gallery-large">
-
-            <img
-              src="https://plain-weur-prod-public.komododecks.com/202609/09/TJFqYd8JO8UgFWEOwNLs/image.jpg"
-              alt="Chops by Whemy food cups"
-              loading="lazy"
-            >
-
-            <div class="gallery-overlay">
-
-              <span>
-                Fresh & Delicious
-              </span>
-
-            </div>
-
-          </div>
-
-
-
-          <!-- GALLERY ITEM 02 -->
-
-          <div class="gallery-item">
-
-            <img
-              src="https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg"
-              alt="Assorted small chops"
-              loading="lazy"
-            >
-
-            <div class="gallery-overlay">
-
-              <span>
-                Small Chops
-              </span>
-
-            </div>
-
-          </div>
-
-
-
-          <!-- GALLERY ITEM 03 -->
-
-          <div class="gallery-item">
-
-            <img
-              src="https://plain-weur-prod-public.komododecks.com/202609/09/6yO9HIBW0sAKNHPUpzif/image.jpg"
-              alt="Fish and finger foods"
-              loading="lazy"
-            >
-
-            <div class="gallery-overlay">
-
-              <span>
-                Fish & Finger Foods
-              </span>
-
-            </div>
-
-          </div>
-
-
-
-          <!-- GALLERY ITEM 04 -->
-
-          <div class="gallery-item">
-
-            <img
-              src="https://plain-weur-prod-public.komododecks.com/202609/09/BWyxBKmnbohXOtGbrle6/image.jpg"
-              alt="Seafood platter"
-              loading="lazy"
-            >
-
-            <div class="gallery-overlay">
-
-              <span>
-                Seafood
-              </span>
-
-            </div>
-
-          </div>
-
-
-
-          <!-- GALLERY ITEM 05 -->
-
-          <div class="gallery-item">
-
-            <img
-              src="https://plain-weur-prod-public.komododecks.com/202609/09/6yO9HIBW0sAKNHPUpzif/image.jpg"
-              alt="Party food selection"
-              loading="lazy"
-            >
-
-            <div class="gallery-overlay">
-
-              <span>
-                Party Orders
-              </span>
-
-            </div>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         CALL TO ACTION
-    ==================================================== -->
-
-    <section class="cta-section">
-
-      <div class="container cta-content">
-
-
-        <div>
-
-          <span class="section-label">
-            READY TO ORDER?
-          </span>
-
-
-          <h2>
-
-            Let's Make Your
-
-            <span>
-              Event Delicious.
-            </span>
-
-          </h2>
-
-
-          <p>
-            Planning a party, birthday, wedding or special
-            event? Let Chops by Whemy take care of the food.
-          </p>
-
-        </div>
-
-
-        <a
-          href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
-          class="btn btn-dark"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Chat on WhatsApp
-        </a>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ===================================================
-         CONTACT SECTION
-    ==================================================== -->
-
-    <section
-      class="section contact-section"
-      id="contact"
-    >
-
-      <div class="container">
-
-
-        <div class="contact-heading">
-
-          <span class="section-label">
-            GET IN TOUCH
-          </span>
-
-
-          <h2>
-
-            Let's Talk
-
-            <span>
-              Food.
-            </span>
-
-          </h2>
-
-
-          <p>
-            Ready to place an order or planning an event?
-            Contact Chops by Whemy and let's make it happen.
-          </p>
-
-        </div>
-
-
-
-        <!-- CONTACT GRID -->
-
-        <div class="contact-grid">
-
-
-          <!-- WHATSAPP -->
-
-          <a
-            href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
-            class="contact-card"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-
-            <div class="contact-icon whatsapp-icon">
-
-              <img
-                src="https://cdn.simpleicons.org/whatsapp/25D366"
-                alt="WhatsApp"
-              >
-
-            </div>
-
-
-            <div>
-
-              <span>
-                WHATSAPP
-              </span>
-
-              <h3>
-                +234 808 323 8515
-              </h3>
-
-            </div>
-
-          </a>
-
-
-
-          <!-- INSTAGRAM -->
-
-          <a
-            href="https://www.instagram.com/chopsbywhemy/"
-            class="contact-card"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-
-            <div class="contact-icon instagram-icon">
-
-              <img
-                src="https://cdn.simpleicons.org/instagram/E4405F"
-                alt="Instagram"
-              >
-
-            </div>
-
-
-            <div>
-
-              <span>
-                INSTAGRAM
-              </span>
-
-              <h3>
-                @chopsbywhemy
-              </h3>
-
-            </div>
-
-          </a>
-
-
-
-          <!-- TIKTOK -->
-
-          <a
-            href="https://www.tiktok.com/search?q=Lagos%20Finger%20Food%20Vendor"
-            class="contact-card"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-
-            <div class="contact-icon tiktok-icon">
-
-              <img
-                src="https://cdn.simpleicons.org/tiktok/ffffff"
-                alt="TikTok"
-              >
-
-            </div>
-
-
-            <div>
-
-              <span>
-                TIKTOK
-              </span>
-
-              <h3>
-                Lagos Finger Food Vendor
-              </h3>
-
-            </div>
-
-          </a>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-  </main>
-
-
-
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
-
-  <footer class="footer">
-
-
-    <div class="container footer-top">
-
-
-      <!-- FOOTER BRAND -->
-
-      <div class="footer-brand">
-
-
-        <a
-          href="#home"
-          class="logo"
-          aria-label="Chops by Whemy"
-        >
-
-          <span class="logo-main">
-            CHOPS
-          </span>
-
-          <span class="logo-sub">
-            BY WHEMY
-          </span>
-
-        </a>
-
-
-        <p>
-          Delicious finger foods made for every occasion.
-        </p>
-
-
-      </div>
-
-
-
-      <!-- FOOTER LINKS -->
 
       <div class="footer-links">
 
-
-        <h4>
-          QUICK LINKS
-        </h4>
-
-
-        <a href="#home">
-          Home
-        </a>
-
-        <a href="#about">
-          About
-        </a>
-
-        <a href="#menu">
-          Menu
-        </a>
-
-        <a href="#gallery">
-          Gallery
-        </a>
-
-        <a href="#video">
-          Video
-        </a>
-
-        <a href="#contact">
-          Contact
-        </a>
-
-
-      </div>
-
-
-
-      <!-- FOOTER SOCIAL -->
-
-      <div class="footer-social">
-
-
-        <h4>
-          FOLLOW US
-        </h4>
-
-
-        <div class="social-links">
-
-
-          <!-- INSTAGRAM -->
-
-          <a
-            href="https://www.instagram.com/chopsbywhemy/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-
-            <img
-              src="https://cdn.simpleicons.org/instagram/E4405F"
-              alt="Instagram"
-            >
-
-          </a>
-
-
-
-          <!-- TIKTOK -->
-
-          <a
-            href="https://www.tiktok.com/search?q=Lagos%20Finger%20Food%20Vendor"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="TikTok"
-          >
-
-            <img
-              src="https://cdn.simpleicons.org/tiktok/ffffff"
-              alt="TikTok"
-            >
-
-          </a>
-
-
-
-          <!-- WHATSAPP -->
-
-          <a
-            href="https://wa.me/2348083238515"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-          >
-
-            <img
-              src="https://cdn.simpleicons.org/whatsapp/25D366"
-              alt="WhatsApp"
-            >
-
-          </a>
-
-
-        </div>
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- FOOTER BOTTOM -->
-
-    <div class="footer-bottom">
-
-      <div class="container">
-
-
-        <p>
-          ©
-          <span id="year"></span>
-          Chops by Whemy.
-          All Rights Reserved.
-        </p>
-
-
-        <p>
-          Lagos, Nigeria
-        </p>
-
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
 
       </div>
 
     </div>
-
 
   </footer>
 
 
-
-  <!-- =====================================================
-       FLOATING WHATSAPP BUTTON
-  ====================================================== -->
+  <!-- ================= FLOATING WHATSAPP ================= -->
 
   <a
     href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
-    class="floating-whatsapp"
+    class="whatsapp-float"
     target="_blank"
-    rel="noopener noreferrer"
+    rel="noopener"
     aria-label="Chat with Chops by Whemy on WhatsApp"
   >
-
-    <img
-      src="https://cdn.simpleicons.org/whatsapp/ffffff"
-      alt="WhatsApp"
-    >
-
+    <span>✆</span>
   </a>
 
 
-
-  <!-- =====================================================
-       JAVASCRIPT
-  ====================================================== -->
-
   <script src="script.js"></script>
 
-
 </body>
-
 </html>
