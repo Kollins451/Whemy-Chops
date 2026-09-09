@@ -8,56 +8,1208 @@
 
   <meta
     name="description"
-    content="Chops by Whemy — Lagos finger food vendor serving delicious party finger foods, Chinese foods and custom food orders."
+    content="Chops by Whemy is a Lagos-based finger food vendor offering party finger foods, event catering, Chinese food and delicious bites for every occasion."
   >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: #090909;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    :root {
+      --orange: #ff7200;
+      --orange-light: #ff922b;
+      --black: #090909;
+      --dark: #111111;
+      --dark-2: #171717;
+      --white: #ffffff;
+      --gray: #a5a5a5;
+      --gray-light: #d2d2d2;
+      --border: rgba(255, 255, 255, 0.09);
+
+      --font-main: "DM Sans", sans-serif;
+      --font-display: "Playfair Display", serif;
+
+      --container: 1180px;
+      --transition: 0.35s ease;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(9, 9, 9, 0.72);
+
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      min-height: 82px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      width: fit-content;
+    }
+
+    .logo-main {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .logo-sub {
+      margin-top: 5px;
+
+      color: var(--orange);
+
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.35em;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav > a {
+      position: relative;
+
+      color: var(--gray-light);
+
+      font-size: 0.9rem;
+      font-weight: 500;
+
+      transition: var(--transition);
+    }
+
+    .nav > a:not(.nav-order)::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+
+      width: 0;
+      height: 2px;
+
+      background: var(--orange);
+
+      transition: var(--transition);
+    }
+
+    .nav > a:hover {
+      color: var(--white);
+    }
+
+    .nav > a:not(.nav-order):hover::after {
+      width: 100%;
+    }
+
+    .nav-order {
+      padding: 12px 21px;
+
+      background: var(--orange);
+      color: var(--white) !important;
+
+      border-radius: 4px;
+
+      font-weight: 700 !important;
+
+      transition: var(--transition);
+    }
+
+    .nav-order:hover {
+      background: var(--orange-light);
+      transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+      display: none;
+
+      width: 44px;
+      height: 44px;
+
+      border: 1px solid var(--border);
+
+      background: var(--dark);
+
+      cursor: pointer;
+
+      border-radius: 5px;
+
+      align-items: center;
+      justify-content: center;
+
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      width: 21px;
+      height: 2px;
+
+      background: var(--white);
+
+      transition: var(--transition);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      position: relative;
+
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      background-image: url("https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg");
+
+      background-size: cover;
+      background-position: center;
+
+      isolation: isolate;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+
+      z-index: -1;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.92) 0%,
+          rgba(0, 0, 0, 0.75) 45%,
+          rgba(0, 0, 0, 0.35) 100%
+        );
+    }
+
+    .hero-content {
+      padding-top: 80px;
+      max-width: 800px;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      color: var(--orange);
+
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+    }
+
+    .hero-label::before {
+      content: "";
+
+      width: 32px;
+      height: 2px;
+
+      background: var(--orange);
+    }
+
+    .hero h1 {
+      margin-top: 22px;
+
+      font-family: var(--font-display);
+
+      font-size: clamp(3.2rem, 7vw, 6.5rem);
+
+      line-height: 0.98;
+
+      font-weight: 700;
+
+      max-width: 800px;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--orange);
+    }
+
+    .hero p {
+      margin-top: 28px;
+
+      max-width: 590px;
+
+      color: var(--gray-light);
+
+      font-size: 1.05rem;
+    }
+
+    .hero-buttons {
+      margin-top: 36px;
+
+      display: flex;
+      gap: 15px;
+
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      min-height: 52px;
+
+      padding: 0 26px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 4px;
+
+      font-size: 0.9rem;
+      font-weight: 700;
+
+      transition: var(--transition);
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--orange-light);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--black);
+
+      transform: translateY(-3px);
+    }
+
+    .btn-dark {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .btn-dark:hover {
+      background: var(--dark-2);
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .section-label {
+      display: inline-block;
+
+      color: var(--orange);
+
+      font-size: 0.75rem;
+      font-weight: 700;
+
+      letter-spacing: 0.2em;
+    }
+
+    .section h2 {
+      margin-top: 15px;
+
+      font-family: var(--font-display);
+
+      font-size: clamp(2.4rem, 5vw, 4.1rem);
+
+      line-height: 1.05;
+    }
+
+    .section h2 span {
+      color: var(--orange);
+    }
+
+    .section-heading {
+      margin-bottom: 55px;
+
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+
+      gap: 40px;
+    }
+
+    .section-heading > p {
+      max-width: 450px;
+
+      color: var(--gray);
+
+      font-size: 0.95rem;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: var(--dark);
+    }
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 80px;
+
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      height: 570px;
+
+      object-fit: cover;
+
+      border-radius: 6px;
+    }
+
+    .about-badge {
+      position: absolute;
+
+      right: -30px;
+      bottom: 35px;
+
+      width: 145px;
+      height: 145px;
+
+      background: var(--orange);
+
+      border-radius: 50%;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      flex-direction: column;
+
+      text-align: center;
+
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    }
+
+    .about-badge strong {
+      font-family: var(--font-display);
+
+      font-size: 2.1rem;
+    }
+
+    .about-badge span {
+      font-size: 0.7rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.08em;
+    }
+
+    .about-content > p {
+      margin-top: 22px;
+
+      color: var(--gray);
+
+      font-size: 1rem;
+    }
+
+    .about-features {
+      margin-top: 35px;
+
+      display: grid;
+
+      gap: 20px;
+    }
+
+    .feature {
+      display: flex;
+
+      gap: 18px;
+
+      padding-bottom: 20px;
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .feature-number {
+      color: var(--orange);
+
+      font-weight: 700;
+    }
+
+    .feature h3 {
+      margin-bottom: 3px;
+
+      font-size: 1rem;
+    }
+
+    .feature p {
+      color: var(--gray);
+
+      font-size: 0.85rem;
+    }
+
+    /* =========================
+       MENU
+    ========================= */
+
+    .menu-section {
+      background: var(--black);
+    }
+
+    .menu-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .menu-card {
+      overflow: hidden;
+
+      background: var(--dark);
+
+      border: 1px solid var(--border);
+
+      border-radius: 6px;
+
+      transition: var(--transition);
+    }
+
+    .menu-card:hover {
+      transform: translateY(-8px);
+
+      border-color: rgba(255, 114, 0, 0.45);
+
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    .menu-image {
+      position: relative;
+
+      height: 270px;
+
+      overflow: hidden;
+    }
+
+    .menu-image img {
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform 0.6s ease;
+    }
+
+    .menu-card:hover .menu-image img {
+      transform: scale(1.06);
+    }
+
+    .menu-number {
+      position: absolute;
+
+      top: 15px;
+      right: 15px;
+
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      background: var(--orange);
+
+      color: var(--white);
+
+      border-radius: 50%;
+
+      font-size: 0.75rem;
+
+      font-weight: 700;
+    }
+
+    .menu-info {
+      padding: 25px;
+    }
+
+    .menu-info h3 {
+      font-family: var(--font-display);
+
+      font-size: 1.45rem;
+    }
+
+    .menu-info p {
+      margin-top: 10px;
+
+      color: var(--gray);
+
+      font-size: 0.9rem;
+    }
+
+    .menu-link {
+      display: inline-block;
+
+      margin-top: 18px;
+
+      color: var(--orange);
+
+      font-size: 0.85rem;
+
+      font-weight: 700;
+
+      transition: var(--transition);
+    }
+
+    .menu-link:hover {
+      color: var(--orange-light);
+
+      transform: translateX(4px);
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery-section {
+      background: var(--black);
+    }
+
+    .gallery-grid {
+      display: grid;
+
+      grid-template-columns: 2fr 1fr 1fr;
+
+      grid-template-rows: 300px 300px;
+
+      gap: 15px;
+    }
+
+    .gallery-item {
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 5px;
+
+      background: var(--dark);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-large {
+      grid-row: span 2;
+    }
+
+    .gallery-overlay {
+      position: absolute;
+
+      inset: auto 0 0 0;
+
+      padding: 35px 20px 20px;
+
+      background:
+        linear-gradient(
+          transparent,
+          rgba(0, 0, 0, 0.8)
+        );
+
+      opacity: 0;
+
+      transform: translateY(10px);
+
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+
+      transform: translateY(0);
+    }
+
+    .gallery-overlay span {
+      color: var(--white);
+
+      font-size: 0.8rem;
+
+      font-weight: 700;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.12em;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 80px 0;
+
+      background: var(--orange);
+    }
+
+    .cta-content {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 40px;
+    }
+
+    .cta .section-label {
+      color: var(--black);
+    }
+
+    .cta h2 {
+      margin-top: 12px;
+
+      max-width: 700px;
+
+      font-family: var(--font-display);
+
+      font-size: clamp(2.4rem, 5vw, 4rem);
+
+      line-height: 1.05;
+    }
+
+    .cta h2 span {
+      color: var(--white);
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-section {
+      background: var(--dark);
+    }
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 100px;
+
+      align-items: start;
+    }
+
+    .contact-content p {
+      margin-top: 22px;
+
+      max-width: 500px;
+
+      color: var(--gray);
+
+      font-size: 1rem;
+    }
+
+    .contact-details {
+      display: grid;
+    }
+
+    .contact-item {
+      padding: 24px 0;
+
+      border-bottom: 1px solid var(--border);
+
+      transition: var(--transition);
+    }
+
+    .contact-item:hover {
+      padding-left: 8px;
+    }
+
+    .contact-label {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: var(--orange);
+
+      font-size: 0.7rem;
+
+      font-weight: 700;
+
+      letter-spacing: 0.15em;
+    }
+
+    .contact-item strong {
+      color: var(--white);
+
+      font-size: 1rem;
+
+      font-weight: 600;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+      padding: 35px 0;
+
+      background: var(--black);
+
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-container {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .footer p {
+      color: var(--gray);
+
+      font-size: 0.8rem;
+
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--gray);
+
+      font-size: 0.8rem;
+
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
+
+    .whatsapp-float {
+      position: fixed;
+
+      right: 22px;
+      bottom: 22px;
+
+      z-index: 999;
+
+      width: 58px;
+      height: 58px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      background: var(--orange);
+
+      color: var(--white);
+
+      border-radius: 50%;
+
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+
+      transition: var(--transition);
+    }
+
+    .whatsapp-float span {
+      font-size: 1.7rem;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-5px) scale(1.05);
+
+      background: var(--orange-light);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 1050px) {
+      .nav {
+        gap: 20px;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid {
+        gap: 50px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 2fr 1fr;
+
+        grid-template-rows:
+          350px
+          250px
+          250px;
+      }
+
+      .gallery-large {
+        grid-row: span 2;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+      }
+    }
+
+    @media (max-width: 950px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav {
+        position: absolute;
+
+        top: 82px;
+
+        left: 20px;
+        right: 20px;
+
+        padding: 20px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background: rgba(17, 17, 17, 0.98);
+
+        border: 1px solid var(--border);
+
+        border-radius: 6px;
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition: var(--transition);
+      }
+
+      .nav.active {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+      }
+
+      .nav > a {
+        padding: 15px 5px;
+
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav > a:not(.nav-order)::after {
+        display: none;
+      }
+
+      .nav-order {
+        margin-top: 12px;
+
+        text-align: center;
+
+        border-bottom: 0 !important;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: calc(100% - 30px);
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .hero {
+        min-height: 760px;
+      }
+
+      .hero-content {
+        padding-top: 90px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 15vw, 4.5rem);
+      }
+
+      .hero p {
+        font-size: 0.95rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .section-heading {
+        margin-bottom: 40px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+      }
+
+      .about-image img {
+        height: 450px;
+      }
+
+      .about-badge {
+        right: 15px;
+        bottom: 20px;
+
+        width: 120px;
+        height: 120px;
+      }
+
+      .about-badge strong {
+        font-size: 1.8rem;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+
+        grid-template-rows:
+          repeat(8, 280px);
+      }
+
+      .gallery-large {
+        grid-row: auto;
+      }
+
+      .gallery-overlay {
+        opacity: 1;
+
+        transform: translateY(0);
+      }
+
+      .cta-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .cta .btn {
+        width: auto;
+      }
+
+      .contact-grid {
+        gap: 40px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+      }
+
+      .whatsapp-float {
+        width: 54px;
+        height: 54px;
+
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .logo-main {
+        font-size: 1.3rem;
+      }
+
+      .logo-sub {
+        font-size: 0.58rem;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .menu-image {
+        height: 240px;
+      }
+
+      .about-image img {
+        height: 400px;
+      }
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header class="header">
     <div class="container nav-container">
 
-      <a href="#home" class="logo" aria-label="Chops by Whemy Home">
+      <a href="#home" class="logo">
         <span class="logo-main">CHOPS</span>
         <span class="logo-sub">BY WHEMY</span>
       </a>
 
-      <nav class="nav" id="nav">
-
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#videos">Videos</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-
-        <a
-          href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
-          class="nav-order"
-          target="_blank"
-          rel="noopener"
-        >
-          Order Now
-        </a>
-
-      </nav>
-
       <button
         class="menu-toggle"
         id="menuToggle"
-        type="button"
         aria-label="Open menu"
         aria-expanded="false"
         aria-controls="nav"
@@ -67,11 +1219,30 @@
         <span></span>
       </button>
 
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+
+        <a
+          href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
+          target="_blank"
+          rel="noopener"
+          class="nav-order"
+        >
+          Order Now
+        </a>
+      </nav>
+
     </div>
   </header>
 
 
-  <!-- ================= HERO ================= -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
   <main>
 
@@ -80,12 +1251,11 @@
       <div class="hero-overlay"></div>
 
       <div class="container">
-
         <div class="hero-content">
 
-          <span class="hero-label">
+          <div class="hero-label">
             LAGOS FINGER FOOD VENDOR
-          </span>
+          </div>
 
           <h1>
             Good Food.
@@ -93,132 +1263,123 @@
           </h1>
 
           <p>
-            Delicious finger foods, party bites and Chinese food made to
-            bring people together. Perfect for parties, events,
-            celebrations and special occasions.
+            Delicious finger foods, party bites, event catering
+            and Chinese food made specially for your occasions.
+            From small gatherings to big celebrations,
+            Chops by Whemy brings great food to your table.
           </p>
 
           <div class="hero-buttons">
 
             <a
               href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
-              class="btn btn-primary"
               target="_blank"
               rel="noopener"
+              class="btn btn-primary"
             >
               Place an Order
             </a>
 
-            <a href="#menu" class="btn btn-outline">
+            <a
+              href="#menu"
+              class="btn btn-outline"
+            >
               Explore Menu
             </a>
 
           </div>
 
         </div>
-
       </div>
 
     </section>
 
 
-    <!-- ================= ABOUT ================= -->
+    <!-- =========================
+         ABOUT
+    ========================= -->
 
     <section class="section about" id="about">
 
-      <div class="container">
+      <div class="container about-grid">
 
-        <div class="about-grid">
+        <div class="about-image">
 
-          <div class="about-image">
+          <img
+            src="https://plain-weur-prod-public.komododecks.com/202609/09/TJFqYd8JO8UgFWEOwNLs/image.jpg"
+            alt="Chops by Whemy finger foods"
+            loading="lazy"
+          >
 
-            <img
-              src="https://plain-weur-prod-public.komododecks.com/202609/09/TJFqYd8JO8UgFWEOwNLs/image.jpg"
-              alt="Chops by Whemy finger foods"
-            >
-
-            <div class="about-badge">
-              <strong>100%</strong>
-              <span>DELICIOUS</span>
-            </div>
-
+          <div class="about-badge">
+            <strong>100%</strong>
+            <span>DELICIOUS</span>
           </div>
 
+        </div>
 
-          <div class="about-content">
+        <div class="about-content">
 
-            <span class="section-label">
-              ABOUT CHOPS BY WHEMY
-            </span>
+          <span class="section-label">
+            ABOUT CHOPS BY WHEMY
+          </span>
 
-            <h2>
-              Food made for
-              <span>good times.</span>
-            </h2>
+          <h2>
+            Food made for
+            <span>good moments.</span>
+          </h2>
 
-            <p>
-              Chops by Whemy is a Lagos-based finger food vendor serving
-              delicious and beautifully prepared food for parties,
-              celebrations, events and special occasions.
-            </p>
+          <p>
+            Chops by Whemy is a Lagos-based finger food vendor
+            providing delicious food for parties, celebrations,
+            events and special occasions.
+          </p>
 
-            <p>
-              From classic party finger foods to Chinese food options,
-              we make it easy to enjoy great food that fits your event
-              and your taste.
-            </p>
+          <p>
+            From tasty party bites and finger foods to Chinese
+            dishes, every order is prepared to make your event
+            memorable.
+          </p>
 
+          <div class="about-features">
 
-            <div class="about-features">
+            <div class="feature">
+              <div class="feature-number">01</div>
 
-              <div class="feature">
+              <div>
+                <h3>Party Finger Foods</h3>
 
-                <div class="feature-number">
-                  01
-                </div>
-
-                <div>
-                  <h3>Party Finger Foods</h3>
-                  <p>
-                    Delicious bites prepared for parties and events.
-                  </p>
-                </div>
-
+                <p>
+                  Delicious bites perfect for parties,
+                  celebrations and gatherings.
+                </p>
               </div>
+            </div>
 
+            <div class="feature">
+              <div class="feature-number">02</div>
 
-              <div class="feature">
+              <div>
+                <h3>Chinese Food</h3>
 
-                <div class="feature-number">
-                  02
-                </div>
-
-                <div>
-                  <h3>Chinese Food</h3>
-                  <p>
-                    Chinese food options are also available for special
-                    orders and events.
-                  </p>
-                </div>
-
+                <p>
+                  Enjoy tasty Chinese-inspired dishes
+                  alongside your favourite party foods.
+                </p>
               </div>
+            </div>
 
+            <div class="feature">
+              <div class="feature-number">03</div>
 
-              <div class="feature">
+              <div>
+                <h3>Made for Your Occasion</h3>
 
-                <div class="feature-number">
-                  03
-                </div>
-
-                <div>
-                  <h3>Made for Your Occasion</h3>
-                  <p>
-                    Food prepared with your event and guests in mind.
-                  </p>
-                </div>
-
+                <p>
+                  Food prepared to suit your event,
+                  celebration or special moment.
+                </p>
               </div>
-
             </div>
 
           </div>
@@ -230,7 +1391,9 @@
     </section>
 
 
-    <!-- ================= MENU ================= -->
+    <!-- =========================
+         MENU
+    ========================= -->
 
     <section class="section menu-section" id="menu">
 
@@ -239,20 +1402,19 @@
         <div class="section-heading">
 
           <div>
-
             <span class="section-label">
-              WHAT WE SERVE
+              WHAT WE OFFER
             </span>
 
             <h2>
-              Our <span>Specialties</span>
+              Our <span>Food</span>
             </h2>
-
           </div>
 
           <p>
-            Delicious food options prepared for parties, events,
-            celebrations and special occasions.
+            From delicious party bites to Chinese food,
+            choose from a variety of options for your
+            next celebration or gathering.
           </p>
 
         </div>
@@ -269,9 +1431,10 @@
               <img
                 src="https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg"
                 alt="Party finger foods"
+                loading="lazy"
               >
 
-              <span class="menu-number">01</span>
+              <div class="menu-number">01</div>
 
             </div>
 
@@ -280,17 +1443,17 @@
               <h3>Party Finger Foods</h3>
 
               <p>
-                Tasty and beautifully prepared finger foods perfect
-                for parties and celebrations.
+                Tasty finger foods prepared for parties,
+                celebrations and special events.
               </p>
 
               <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20order%20party%20finger%20foods."
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20want%20to%20order%20Party%20Finger%20Foods."
                 target="_blank"
                 rel="noopener"
                 class="menu-link"
               >
-                Order Now →
+                Order on WhatsApp →
               </a>
 
             </div>
@@ -306,10 +1469,11 @@
 
               <img
                 src="https://plain-weur-prod-public.komododecks.com/202609/09/6yO9HIBW0sAKNHPUpzif/image.jpg"
-                alt="Delicious party bites"
+                alt="Party bites"
+                loading="lazy"
               >
 
-              <span class="menu-number">02</span>
+              <div class="menu-number">02</div>
 
             </div>
 
@@ -318,17 +1482,17 @@
               <h3>Party Bites</h3>
 
               <p>
-                Small, delicious bites that make every gathering
-                more enjoyable.
+                Small, delicious bites that make every
+                gathering extra special.
               </p>
 
               <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20order%20party%20bites."
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20want%20to%20order%20Party%20Bites."
                 target="_blank"
                 rel="noopener"
                 class="menu-link"
               >
-                Order Now →
+                Order on WhatsApp →
               </a>
 
             </div>
@@ -345,9 +1509,10 @@
               <img
                 src="https://plain-weur-prod-public.komododecks.com/202609/09/BWyxBKmnbohXOtGbrle6/image.jpg"
                 alt="Event food"
+                loading="lazy"
               >
 
-              <span class="menu-number">03</span>
+              <div class="menu-number">03</div>
 
             </div>
 
@@ -356,17 +1521,17 @@
               <h3>Event Food</h3>
 
               <p>
-                Food prepared to make your events memorable and
-                satisfying for your guests.
+                Food options prepared for birthdays,
+                weddings, celebrations and events.
               </p>
 
               <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20need%20food%20for%20an%20event."
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20want%20to%20order%20Event%20Food."
                 target="_blank"
                 rel="noopener"
                 class="menu-link"
               >
-                Order Now →
+                Order on WhatsApp →
               </a>
 
             </div>
@@ -383,9 +1548,10 @@
               <img
                 src="https://plain-weur-prod-public.komododecks.com/202609/09/TJFqYd8JO8UgFWEOwNLs/image.jpg"
                 alt="Finger food catering"
+                loading="lazy"
               >
 
-              <span class="menu-number">04</span>
+              <div class="menu-number">04</div>
 
             </div>
 
@@ -394,17 +1560,17 @@
               <h3>Finger Food Catering</h3>
 
               <p>
-                Catering options for birthdays, celebrations,
-                gatherings and special occasions.
+                Delicious catering options designed
+                for gatherings of different sizes.
               </p>
 
               <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20need%20finger%20food%20catering."
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20want%20to%20ask%20about%20Finger%20Food%20Catering."
                 target="_blank"
                 rel="noopener"
                 class="menu-link"
               >
-                Order Now →
+                Order on WhatsApp →
               </a>
 
             </div>
@@ -421,9 +1587,10 @@
               <img
                 src="https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg"
                 alt="Special occasion food"
+                loading="lazy"
               >
 
-              <span class="menu-number">05</span>
+              <div class="menu-number">05</div>
 
             </div>
 
@@ -432,17 +1599,17 @@
               <h3>Special Occasions</h3>
 
               <p>
-                Delicious food for birthdays, weddings, get-togethers
-                and other memorable moments.
+                Make birthdays, celebrations and
+                special moments even more memorable.
               </p>
 
               <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20want%20to%20make%20an%20order%20for%20a%20special%20occasion."
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20want%20food%20for%20a%20special%20occasion."
                 target="_blank"
                 rel="noopener"
                 class="menu-link"
               >
-                Order Now →
+                Order on WhatsApp →
               </a>
 
             </div>
@@ -458,10 +1625,11 @@
 
               <img
                 src="https://plain-weur-prod-public.komododecks.com/202609/09/6yO9HIBW0sAKNHPUpzif/image.jpg"
-                alt="Chinese food and bites"
+                alt="Chinese food"
+                loading="lazy"
               >
 
-              <span class="menu-number">06</span>
+              <div class="menu-number">06</div>
 
             </div>
 
@@ -470,17 +1638,17 @@
               <h3>Chinese Food</h3>
 
               <p>
-                Chinese food options are available alongside our
-                party finger foods for special orders and events.
+                Enjoy delicious Chinese-inspired dishes
+                prepared for your event or gathering.
               </p>
 
               <a
-                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20ask%20about%20Chinese%20food."
+                href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20want%20to%20order%20Chinese%20Food."
                 target="_blank"
                 rel="noopener"
                 class="menu-link"
               >
-                Ask About It →
+                Order on WhatsApp →
               </a>
 
             </div>
@@ -494,120 +1662,9 @@
     </section>
 
 
-    <!-- ================= VIDEOS ================= -->
-
-    <section class="section video-section" id="videos">
-
-      <div class="container">
-
-        <div class="video-heading">
-
-          <span class="section-label">
-            WATCH OUR FOOD
-          </span>
-
-          <h2>
-            Fresh from the
-            <span>Kitchen</span>
-          </h2>
-
-          <p>
-            Take a look at some of the food and moments from
-            Chops by Whemy.
-          </p>
-
-        </div>
-
-
-        <div class="video-grid">
-
-          <!-- VIDEO 1 -->
-
-          <div class="video-card">
-
-            <div class="video-wrapper">
-
-              <video
-                controls
-                playsinline
-                preload="metadata"
-              >
-                <source src="video1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-
-            </div>
-
-          </div>
-
-
-          <!-- VIDEO 2 -->
-
-          <div class="video-card">
-
-            <div class="video-wrapper">
-
-              <video
-                controls
-                playsinline
-                preload="metadata"
-              >
-                <source src="video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-
-            </div>
-
-          </div>
-
-
-          <!-- VIDEO 3 -->
-
-          <div class="video-card">
-
-            <div class="video-wrapper">
-
-              <video
-                controls
-                playsinline
-                preload="metadata"
-              >
-                <source src="video3.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-
-            </div>
-
-          </div>
-
-
-          <!-- VIDEO 4 -->
-
-          <div class="video-card">
-
-            <div class="video-wrapper">
-
-              <video
-                controls
-                playsinline
-                preload="metadata"
-              >
-                <source src="video4.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= GALLERY ================= -->
+    <!-- =========================
+         GALLERY
+    ========================= -->
 
     <section class="section gallery-section" id="gallery">
 
@@ -616,21 +1673,18 @@
         <div class="section-heading">
 
           <div>
-
             <span class="section-label">
-              OUR GALLERY
+              OUR WORK
             </span>
 
             <h2>
-              Food worth
-              <span>sharing.</span>
+              Food <span>Gallery</span>
             </h2>
-
           </div>
 
           <p>
-            A glimpse of the delicious food and experiences
-            we create for our customers.
+            A look at some of the delicious food and
+            experiences from Chops by Whemy.
           </p>
 
         </div>
@@ -638,11 +1692,14 @@
 
         <div class="gallery-grid">
 
+          <!-- Original image 1 -->
+
           <div class="gallery-item gallery-large">
 
             <img
               src="https://plain-weur-prod-public.komododecks.com/202609/09/TJFqYd8JO8UgFWEOwNLs/image.jpg"
               alt="Chops by Whemy food"
+              loading="lazy"
             >
 
             <div class="gallery-overlay">
@@ -652,25 +1709,31 @@
           </div>
 
 
+          <!-- Original image 2 -->
+
           <div class="gallery-item">
 
             <img
               src="https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg"
-              alt="Finger foods"
+              alt="Party finger foods"
+              loading="lazy"
             >
 
             <div class="gallery-overlay">
-              <span>Finger Foods</span>
+              <span>Party Finger Foods</span>
             </div>
 
           </div>
 
+
+          <!-- Original image 3 -->
 
           <div class="gallery-item">
 
             <img
               src="https://plain-weur-prod-public.komododecks.com/202609/09/6yO9HIBW0sAKNHPUpzif/image.jpg"
               alt="Party bites"
+              loading="lazy"
             >
 
             <div class="gallery-overlay">
@@ -680,11 +1743,14 @@
           </div>
 
 
+          <!-- Original image 4 -->
+
           <div class="gallery-item">
 
             <img
               src="https://plain-weur-prod-public.komododecks.com/202609/09/BWyxBKmnbohXOtGbrle6/image.jpg"
               alt="Event food"
+              loading="lazy"
             >
 
             <div class="gallery-overlay">
@@ -694,11 +1760,14 @@
           </div>
 
 
+          <!-- Original image -->
+
           <div class="gallery-item">
 
             <img
               src="https://plain-weur-prod-public.komododecks.com/202609/09/R2KEU9gwDxsDfBW6xWZa/image.jpg"
               alt="Special occasion food"
+              loading="lazy"
             >
 
             <div class="gallery-overlay">
@@ -707,6 +1776,74 @@
 
           </div>
 
+
+          <!-- NEW IMAGE 1 -->
+
+          <div class="gallery-item">
+
+            <img
+              src="https://plain-weur-prod-public.komododecks.com/202609/09/mQGx72rwkrmT6KBdyBlN/image.jpg"
+              alt="Grilled finger foods"
+              loading="lazy"
+            >
+
+            <div class="gallery-overlay">
+              <span>Grilled Finger Foods</span>
+            </div>
+
+          </div>
+
+
+          <!-- NEW IMAGE 2 -->
+
+          <div class="gallery-item">
+
+            <img
+              src="https://plain-weur-prod-public.komododecks.com/202609/09/g6r8R0StytWBzvwYKx2y/image.jpg"
+              alt="Party food platter"
+              loading="lazy"
+            >
+
+            <div class="gallery-overlay">
+              <span>Party Food</span>
+            </div>
+
+          </div>
+
+
+          <!-- NEW IMAGE 3 -->
+
+          <div class="gallery-item">
+
+            <img
+              src="https://plain-weur-prod-public.komododecks.com/202609/09/Mh2iSz0fivr9NCUKWfv3/image.jpg"
+              alt="Fried rice and Chinese chicken"
+              loading="lazy"
+            >
+
+            <div class="gallery-overlay">
+              <span>Chinese Food</span>
+            </div>
+
+          </div>
+
+
+          <!-- NEW IMAGE 4 -->
+
+          <div class="gallery-item">
+
+            <img
+              src="https://plain-weur-prod-public.komododecks.com/202609/09/j6YgYlTUkAnBkiuMFe1x/image.jpg"
+              alt="Packaged finger foods"
+              loading="lazy"
+            >
+
+            <div class="gallery-overlay">
+              <span>Food Packaging</span>
+            </div>
+
+          </div>
+
         </div>
 
       </div>
@@ -714,137 +1851,128 @@
     </section>
 
 
-    <!-- ================= CTA ================= -->
+    <!-- =========================
+         CTA
+    ========================= -->
 
     <section class="cta">
 
-      <div class="container">
+      <div class="container cta-content">
 
-        <div class="cta-content">
+        <div>
 
-          <div>
+          <span class="section-label">
+            READY TO ORDER?
+          </span>
 
-            <span class="section-label">
-              READY TO ORDER?
-            </span>
-
-            <h2>
-              Let's make your event
-              <span>delicious.</span>
-            </h2>
-
-          </div>
-
-          <a
-            href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
-            class="btn btn-dark"
-            target="_blank"
-            rel="noopener"
-          >
-            Order on WhatsApp
-          </a>
+          <h2>
+            Let's make your next event
+            <span>delicious.</span>
+          </h2>
 
         </div>
+
+        <a
+          href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
+          target="_blank"
+          rel="noopener"
+          class="btn btn-dark"
+        >
+          Order on WhatsApp
+        </a>
 
       </div>
 
     </section>
 
 
-    <!-- ================= CONTACT ================= -->
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
     <section class="section contact-section" id="contact">
 
-      <div class="container">
+      <div class="container contact-grid">
 
-        <div class="contact-grid">
+        <div class="contact-content">
 
-          <div class="contact-content">
+          <span class="section-label">
+            GET IN TOUCH
+          </span>
 
-            <span class="section-label">
-              GET IN TOUCH
+          <h2>
+            Let's talk about
+            <span>your order.</span>
+          </h2>
+
+          <p>
+            Ready to order delicious food for your party,
+            event or special occasion? Get in touch with
+            Chops by Whemy today.
+          </p>
+
+        </div>
+
+
+        <div class="contact-details">
+
+          <a
+            href="https://wa.me/2348083238515"
+            target="_blank"
+            rel="noopener"
+            class="contact-item"
+          >
+            <span class="contact-label">
+              WHATSAPP
             </span>
 
-            <h2>
-              Let's talk
-              <span>food.</span>
-            </h2>
-
-            <p>
-              Ready to place an order or planning food for an event?
-              Contact Chops by Whemy directly.
-            </p>
-
-          </div>
+            <strong>
+              +234 808 323 8515
+            </strong>
+          </a>
 
 
-          <div class="contact-details">
+          <a
+            href="https://www.instagram.com/chopsbywhemy/"
+            target="_blank"
+            rel="noopener"
+            class="contact-item"
+          >
+            <span class="contact-label">
+              INSTAGRAM
+            </span>
 
-            <a
-              href="https://wa.me/2348083238515"
-              target="_blank"
-              rel="noopener"
-              class="contact-item"
-            >
-
-              <span class="contact-label">
-                WHATSAPP
-              </span>
-
-              <strong>
-                +234 808 323 8515
-              </strong>
-
-            </a>
+            <strong>
+              @chopsbywhemy
+            </strong>
+          </a>
 
 
-            <a
-              href="https://www.instagram.com/chopsbywhemy/"
-              target="_blank"
-              rel="noopener"
-              class="contact-item"
-            >
+          <a
+            href="https://www.tiktok.com/search?q=Lagos%20Finger%20Food%20Vendor"
+            target="_blank"
+            rel="noopener"
+            class="contact-item"
+          >
+            <span class="contact-label">
+              TIKTOK
+            </span>
 
-              <span class="contact-label">
-                INSTAGRAM
-              </span>
-
-              <strong>
-                @chopsbywhemy
-              </strong>
-
-            </a>
+            <strong>
+              Lagos Finger Food Vendor
+            </strong>
+          </a>
 
 
-            <a
-              href="https://www.tiktok.com/search?q=Lagos%20Finger%20Food%20Vendor"
-              target="_blank"
-              rel="noopener"
-              class="contact-item"
-            >
+          <div class="contact-item">
 
-              <span class="contact-label">
-                TIKTOK
-              </span>
+            <span class="contact-label">
+              LOCATION
+            </span>
 
-              <strong>
-                Lagos Finger Food Vendor
-              </strong>
-
-            </a>
-
-
-            <div class="contact-item">
-
-              <span class="contact-label">
-                LOCATION
-              </span>
-
-              <strong>
-                Lagos, Nigeria
-              </strong>
-
-            </div>
+            <strong>
+              Lagos, Nigeria
+            </strong>
 
           </div>
 
@@ -857,34 +1985,29 @@
   </main>
 
 
-  <!-- ================= FOOTER ================= -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer class="footer">
 
     <div class="container footer-container">
 
       <a href="#home" class="logo">
-
-        <span class="logo-main">
-          CHOPS
-        </span>
-
-        <span class="logo-sub">
-          BY WHEMY
-        </span>
-
+        <span class="logo-main">CHOPS</span>
+        <span class="logo-sub">BY WHEMY</span>
       </a>
 
-
       <p>
-        © <span id="year"></span> Chops by Whemy. All rights reserved.
+        © <span id="year"></span> Chops by Whemy.
+        All rights reserved.
       </p>
-
 
       <div class="footer-links">
 
-        <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
 
       </div>
@@ -894,20 +2017,106 @@
   </footer>
 
 
-  <!-- ================= FLOATING WHATSAPP ================= -->
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================= -->
 
   <a
-    href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
-    class="whatsapp-float"
+    href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20make%20an%20order."
     target="_blank"
     rel="noopener"
-    aria-label="Chat with Chops by Whemy on WhatsApp"
+    class="whatsapp-float"
+    aria-label="Chat on WhatsApp"
   >
     <span>✆</span>
   </a>
 
 
-  <script src="script.js"></script>
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const nav = document.getElementById("nav");
+
+    if (menuToggle && nav) {
+
+      menuToggle.addEventListener("click", () => {
+
+        const isOpen = nav.classList.toggle("active");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+      });
+
+
+      nav.querySelectorAll("a").forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+          nav.classList.remove("active");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        });
+
+      });
+
+
+      window.addEventListener("resize", () => {
+
+        if (window.innerWidth > 950) {
+
+          nav.classList.remove("active");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+        }
+
+      });
+
+    }
+
+
+    const year = document.getElementById("year");
+
+    if (year) {
+      year.textContent = new Date().getFullYear();
+    }
+
+
+    const header = document.querySelector(".header");
+
+    window.addEventListener("scroll", () => {
+
+      if (!header) return;
+
+      if (window.scrollY > 30) {
+
+        header.style.background =
+          "rgba(9, 9, 9, 0.95)";
+
+      } else {
+
+        header.style.background =
+          "rgba(9, 9, 9, 0.72)";
+
+      }
+
+    });
+
+  </script>
 
 </body>
 </html>
