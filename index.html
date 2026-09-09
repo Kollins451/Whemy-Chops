@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
@@ -21,32 +24,45 @@
     rel="stylesheet"
   >
 
-  <!-- Your CSS -->
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
+
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
+
   <header class="header">
 
     <div class="container nav-container">
 
+      <!-- Logo -->
       <a href="#home" class="logo">
         <span>CHOPS</span>
         <small>BY WHEMY</small>
       </a>
 
+
+      <!-- Navigation -->
       <nav class="nav" id="nav">
 
         <a href="#home">Home</a>
+
         <a href="#about">About</a>
+
         <a href="#menu">Menu</a>
+
         <a href="#gallery">Gallery</a>
+
         <a href="#contact">Contact</a>
 
       </nav>
 
+
+      <!-- Desktop Order Button -->
       <a
         href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
         class="nav-button"
@@ -56,10 +72,21 @@
         Order Now
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+
+      <!-- Mobile Menu -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open menu"
+        type="button"
+      >
+
         <span></span>
+
         <span></span>
+
         <span></span>
+
       </button>
 
     </div>
@@ -67,12 +94,22 @@
   </header>
 
 
-  <!-- ================= HERO ================= -->
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
+
   <main>
+
+
+    <!-- =================================================
+         HERO
+    ================================================== -->
 
     <section class="hero" id="home">
 
       <div class="hero-overlay"></div>
+
 
       <div class="container hero-content">
 
@@ -80,10 +117,12 @@
           LAGOS FINGER FOOD VENDOR
         </span>
 
+
         <h1>
           Delicious Bites
           <span>Made For Every Occasion.</span>
         </h1>
+
 
         <p>
           From tasty small chops to delicious finger foods,
@@ -91,8 +130,10 @@
           parties, events and special occasions.
         </p>
 
+
         <div class="hero-buttons">
 
+          <!-- WhatsApp Order -->
           <a
             href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
             class="btn btn-primary"
@@ -102,7 +143,12 @@
             Order on WhatsApp
           </a>
 
-          <a href="#menu" class="btn btn-secondary">
+
+          <!-- Menu -->
+          <a
+            href="#menu"
+            class="btn btn-secondary"
+          >
             Explore Our Menu
           </a>
 
@@ -110,19 +156,33 @@
 
       </div>
 
+
+      <!-- Scroll Indicator -->
       <div class="hero-scroll">
+
         <span>Scroll to explore</span>
+
         <div class="scroll-line"></div>
+
       </div>
 
     </section>
 
 
-    <!-- ================= ABOUT ================= -->
-    <section class="section about-section" id="about">
+
+    <!-- =================================================
+         ABOUT
+    ================================================== -->
+
+    <section
+      class="section about-section"
+      id="about"
+    >
 
       <div class="container about-grid">
 
+
+        <!-- About Image -->
         <div class="about-image">
 
           <div class="image-frame">
@@ -130,28 +190,41 @@
             <img
               src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85"
               alt="Delicious finger food"
+              loading="lazy"
             >
 
           </div>
 
+
+          <!-- Badge -->
           <div class="about-badge">
+
             <strong>100%</strong>
-            <span>Made With<br>Love</span>
+
+            <span>
+              Made With<br>
+              Love
+            </span>
+
           </div>
 
         </div>
 
 
+
+        <!-- About Text -->
         <div class="about-content">
 
           <span class="section-label">
             ABOUT US
           </span>
 
+
           <h2>
             Good Food.
             <span>Great Moments.</span>
           </h2>
+
 
           <p>
             At Chops by Whemy, we specialize in making delicious
@@ -159,37 +232,82 @@
             extra special.
           </p>
 
+
           <p>
             Whether you're planning a birthday party, wedding,
             corporate event, house party or any special celebration,
             we've got tasty treats ready for you and your guests.
           </p>
 
+
+          <!-- Features -->
           <div class="about-features">
 
-            <div class="feature">
-              <span class="feature-icon">✓</span>
-              <div>
-                <h3>Freshly Prepared</h3>
-                <p>Fresh and tasty food prepared with care.</p>
-              </div>
-            </div>
 
             <div class="feature">
-              <span class="feature-icon">✓</span>
+
+              <span class="feature-icon">
+                ✓
+              </span>
+
               <div>
-                <h3>Perfect For Events</h3>
-                <p>Food packages for parties and special occasions.</p>
+
+                <h3>
+                  Freshly Prepared
+                </h3>
+
+                <p>
+                  Fresh and tasty food prepared with care.
+                </p>
+
               </div>
+
             </div>
 
+
+
             <div class="feature">
-              <span class="feature-icon">✓</span>
+
+              <span class="feature-icon">
+                ✓
+              </span>
+
               <div>
-                <h3>Custom Orders</h3>
-                <p>Tell us what you need and we'll prepare it for you.</p>
+
+                <h3>
+                  Perfect For Events
+                </h3>
+
+                <p>
+                  Food packages for parties and special occasions.
+                </p>
+
               </div>
+
             </div>
+
+
+
+            <div class="feature">
+
+              <span class="feature-icon">
+                ✓
+              </span>
+
+              <div>
+
+                <h3>
+                  Custom Orders
+                </h3>
+
+                <p>
+                  Tell us what you need and we'll prepare it for you.
+                </p>
+
+              </div>
+
+            </div>
+
 
           </div>
 
@@ -200,20 +318,31 @@
     </section>
 
 
-    <!-- ================= MENU ================= -->
-    <section class="section menu-section" id="menu">
+
+    <!-- =================================================
+         MENU
+    ================================================== -->
+
+    <section
+      class="section menu-section"
+      id="menu"
+    >
 
       <div class="container">
 
+
+        <!-- Heading -->
         <div class="section-heading">
 
           <span class="section-label">
             WHAT WE OFFER
           </span>
 
+
           <h2>
             Our Specialties
           </h2>
+
 
           <p>
             Delicious finger foods made to satisfy your cravings
@@ -223,9 +352,15 @@
         </div>
 
 
+
+        <!-- Menu Cards -->
         <div class="menu-grid">
 
-          <!-- Samosa -->
+
+          <!-- =================
+               SAMOSA
+          ================== -->
+
           <div class="menu-card">
 
             <div class="menu-image">
@@ -233,15 +368,23 @@
               <img
                 src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=700&q=85"
                 alt="Samosa"
+                loading="lazy"
               >
 
             </div>
 
+
             <div class="menu-content">
 
-              <span class="menu-number">01</span>
+              <span class="menu-number">
+                01
+              </span>
 
-              <h3>Samosa</h3>
+
+              <h3>
+                Samosa
+              </h3>
+
 
               <p>
                 Crispy and delicious samosas prepared
@@ -253,23 +396,36 @@
           </div>
 
 
-          <!-- Spring Rolls -->
+
+          <!-- =================
+               SPRING ROLLS
+          ================== -->
+
           <div class="menu-card">
 
             <div class="menu-image">
 
+              <!-- FIXED SPRING ROLL IMAGE -->
               <img
-                src="https://images.unsplash.com/photo-1548507200-0e9f4a5f7b58?auto=format&fit=crop&w=700&q=85"
+                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=700&q=85"
                 alt="Spring rolls"
+                loading="lazy"
               >
 
             </div>
 
+
             <div class="menu-content">
 
-              <span class="menu-number">02</span>
+              <span class="menu-number">
+                02
+              </span>
 
-              <h3>Spring Rolls</h3>
+
+              <h3>
+                Spring Rolls
+              </h3>
+
 
               <p>
                 Crunchy spring rolls packed with delicious
@@ -281,7 +437,11 @@
           </div>
 
 
-          <!-- Chicken -->
+
+          <!-- =================
+               CHICKEN
+          ================== -->
+
           <div class="menu-card">
 
             <div class="menu-image">
@@ -289,15 +449,23 @@
               <img
                 src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=700&q=85"
                 alt="Chicken"
+                loading="lazy"
               >
 
             </div>
 
+
             <div class="menu-content">
 
-              <span class="menu-number">03</span>
+              <span class="menu-number">
+                03
+              </span>
 
-              <h3>Chicken</h3>
+
+              <h3>
+                Chicken
+              </h3>
+
 
               <p>
                 Tasty chicken prepared perfectly for
@@ -309,7 +477,11 @@
           </div>
 
 
-          <!-- Small Chops -->
+
+          <!-- =================
+               SMALL CHOPS
+          ================== -->
+
           <div class="menu-card">
 
             <div class="menu-image">
@@ -317,15 +489,23 @@
               <img
                 src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&w=700&q=85"
                 alt="Small chops"
+                loading="lazy"
               >
 
             </div>
 
+
             <div class="menu-content">
 
-              <span class="menu-number">04</span>
+              <span class="menu-number">
+                04
+              </span>
 
-              <h3>Small Chops</h3>
+
+              <h3>
+                Small Chops
+              </h3>
+
 
               <p>
                 A delicious selection of popular small chops
@@ -337,7 +517,11 @@
           </div>
 
 
-          <!-- Event Packages -->
+
+          <!-- =================
+               EVENT PACKAGES
+          ================== -->
+
           <div class="menu-card">
 
             <div class="menu-image">
@@ -345,15 +529,23 @@
               <img
                 src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=700&q=85"
                 alt="Event food package"
+                loading="lazy"
               >
 
             </div>
 
+
             <div class="menu-content">
 
-              <span class="menu-number">05</span>
+              <span class="menu-number">
+                05
+              </span>
 
-              <h3>Event Packages</h3>
+
+              <h3>
+                Event Packages
+              </h3>
+
 
               <p>
                 Food packages prepared specially for weddings,
@@ -365,7 +557,11 @@
           </div>
 
 
-          <!-- Custom Orders -->
+
+          <!-- =================
+               CUSTOM ORDERS
+          ================== -->
+
           <div class="menu-card">
 
             <div class="menu-image">
@@ -373,15 +569,23 @@
               <img
                 src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85"
                 alt="Custom food order"
+                loading="lazy"
               >
 
             </div>
 
+
             <div class="menu-content">
 
-              <span class="menu-number">06</span>
+              <span class="menu-number">
+                06
+              </span>
 
-              <h3>Custom Orders</h3>
+
+              <h3>
+                Custom Orders
+              </h3>
+
 
               <p>
                 Have something specific in mind?
@@ -392,6 +596,7 @@
 
           </div>
 
+
         </div>
 
       </div>
@@ -399,20 +604,31 @@
     </section>
 
 
-    <!-- ================= GALLERY ================= -->
-    <section class="section gallery-section" id="gallery">
+
+    <!-- =================================================
+         GALLERY
+    ================================================== -->
+
+    <section
+      class="section gallery-section"
+      id="gallery"
+    >
 
       <div class="container">
 
+
+        <!-- Gallery Heading -->
         <div class="section-heading">
 
           <span class="section-label">
             OUR FOOD
           </span>
 
+
           <h2>
             A Taste Of What We Do
           </h2>
+
 
           <p>
             Beautifully prepared finger foods for beautiful moments.
@@ -421,16 +637,21 @@
         </div>
 
 
+
+        <!-- Gallery -->
         <div class="gallery-grid">
+
 
           <div class="gallery-item gallery-large">
 
             <img
               src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=85"
               alt="Finger food"
+              loading="lazy"
             >
 
           </div>
+
 
 
           <div class="gallery-item">
@@ -438,9 +659,11 @@
             <img
               src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=800&q=85"
               alt="Samosa"
+              loading="lazy"
             >
 
           </div>
+
 
 
           <div class="gallery-item">
@@ -448,9 +671,11 @@
             <img
               src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&w=800&q=85"
               alt="Chicken"
+              loading="lazy"
             >
 
           </div>
+
 
 
           <div class="gallery-item">
@@ -458,9 +683,11 @@
             <img
               src="https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=800&q=85"
               alt="Event food"
+              loading="lazy"
             >
 
           </div>
+
 
 
           <div class="gallery-item">
@@ -468,9 +695,11 @@
             <img
               src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
               alt="Food preparation"
+              loading="lazy"
             >
 
           </div>
+
 
         </div>
 
@@ -479,7 +708,11 @@
     </section>
 
 
-    <!-- ================= CTA ================= -->
+
+    <!-- =================================================
+         CALL TO ACTION
+    ================================================== -->
+
     <section class="cta-section">
 
       <div class="container cta-content">
@@ -488,15 +721,18 @@
           READY TO ORDER?
         </span>
 
+
         <h2>
           Let's Make Your Event
           <span>Extra Delicious.</span>
         </h2>
 
+
         <p>
           Contact Chops by Whemy today and let's prepare
           delicious finger foods for your special occasion.
         </p>
+
 
         <a
           href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
@@ -512,20 +748,31 @@
     </section>
 
 
-    <!-- ================= CONTACT ================= -->
-    <section class="section contact-section" id="contact">
+
+    <!-- =================================================
+         CONTACT
+    ================================================== -->
+
+    <section
+      class="section contact-section"
+      id="contact"
+    >
 
       <div class="container">
 
+
+        <!-- Contact Heading -->
         <div class="section-heading">
 
           <span class="section-label">
             GET IN TOUCH
           </span>
 
+
           <h2>
             Contact Us
           </h2>
+
 
           <p>
             Ready to order? Connect with Chops by Whemy today.
@@ -534,10 +781,15 @@
         </div>
 
 
+
+        <!-- Contact Cards -->
         <div class="contact-grid">
 
 
-          <!-- WHATSAPP -->
+          <!-- =================
+               WHATSAPP
+          ================== -->
+
           <a
             href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
             class="contact-card"
@@ -554,11 +806,16 @@
 
             </div>
 
-            <h3>WhatsApp</h3>
+
+            <h3>
+              WhatsApp
+            </h3>
+
 
             <p>
               +234 808 323 8515
             </p>
+
 
             <span class="contact-action">
               Chat With Us →
@@ -567,7 +824,11 @@
           </a>
 
 
-          <!-- INSTAGRAM -->
+
+          <!-- =================
+               INSTAGRAM
+          ================== -->
+
           <a
             href="https://www.instagram.com/chopsbywhemy/"
             class="contact-card"
@@ -584,11 +845,16 @@
 
             </div>
 
-            <h3>Instagram</h3>
+
+            <h3>
+              Instagram
+            </h3>
+
 
             <p>
               Chops by Whemy
             </p>
+
 
             <span class="contact-action">
               Follow Us →
@@ -597,7 +863,11 @@
           </a>
 
 
-          <!-- TIKTOK -->
+
+          <!-- =================
+               TIKTOK
+          ================== -->
+
           <a
             href="https://www.tiktok.com/search?q=Lagos%20Finger%20Food%20Vendor"
             class="contact-card"
@@ -614,11 +884,16 @@
 
             </div>
 
-            <h3>TikTok</h3>
+
+            <h3>
+              TikTok
+            </h3>
+
 
             <p>
               Lagos Finger Food Vendor
             </p>
+
 
             <span class="contact-action">
               Find Us →
@@ -633,20 +908,35 @@
 
     </section>
 
+
   </main>
 
 
-  <!-- ================= FOOTER ================= -->
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
   <footer class="footer">
 
     <div class="container footer-content">
 
+
+      <!-- Footer Brand -->
       <div class="footer-brand">
 
         <a href="#home" class="logo">
-          <span>CHOPS</span>
-          <small>BY WHEMY</small>
+
+          <span>
+            CHOPS
+          </span>
+
+          <small>
+            BY WHEMY
+          </small>
+
         </a>
+
 
         <p>
           Delicious finger foods for every occasion.
@@ -655,53 +945,83 @@
       </div>
 
 
+
+      <!-- Footer Links -->
       <div class="footer-links">
 
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">
+          Home
+        </a>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#menu">
+          Menu
+        </a>
+
+        <a href="#gallery">
+          Gallery
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
 
       </div>
 
 
+
+      <!-- Footer Social -->
       <div class="footer-social">
 
+
+        <!-- WhatsApp -->
         <a
           href="https://wa.me/2348083238515"
           target="_blank"
           rel="noopener"
           aria-label="WhatsApp"
         >
+
           <img
             src="https://cdn.simpleicons.org/whatsapp/25D366"
             alt="WhatsApp"
           >
+
         </a>
 
+
+        <!-- Instagram -->
         <a
           href="https://www.instagram.com/chopsbywhemy/"
           target="_blank"
           rel="noopener"
           aria-label="Instagram"
         >
+
           <img
             src="https://cdn.simpleicons.org/instagram/E4405F"
             alt="Instagram"
           >
+
         </a>
 
+
+        <!-- TikTok -->
         <a
           href="https://www.tiktok.com/search?q=Lagos%20Finger%20Food%20Vendor"
           target="_blank"
           rel="noopener"
           aria-label="TikTok"
         >
+
           <img
             src="https://cdn.simpleicons.org/tiktok/ffffff"
             alt="TikTok"
           >
+
         </a>
 
       </div>
@@ -709,12 +1029,15 @@
     </div>
 
 
+
+    <!-- Footer Copyright -->
     <div class="footer-bottom">
 
       <div class="container">
 
         <p>
-          © <span id="year"></span> Chops by Whemy.
+          © <span id="year"></span>
+          Chops by Whemy.
           All Rights Reserved.
         </p>
 
@@ -725,7 +1048,10 @@
   </footer>
 
 
-  <!-- ================= FLOATING WHATSAPP ================= -->
+
+  <!-- =====================================================
+       FLOATING WHATSAPP
+  ====================================================== -->
 
   <a
     href="https://wa.me/2348083238515?text=Hello%20Chops%20by%20Whemy%2C%20I%20would%20like%20to%20place%20an%20order."
@@ -743,7 +1069,11 @@
   </a>
 
 
-  <!-- Your JavaScript -->
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
   <script src="script.js"></script>
 
 </body>
